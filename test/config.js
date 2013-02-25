@@ -29,7 +29,8 @@ requirejs.config({
             exports: 'jasmine'
         },
         'jasmine-html': {
-            exports: 'jasmine.HtmlReporter'
+            defs: ['jasmine'],
+            exports: 'jasmine'
         }
     }
 });

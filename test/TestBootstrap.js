@@ -1,11 +1,12 @@
 define(['jasmine',
+        'libs/backbone/domReady',
         'jasmine-html',
-        'libs/backbone/domReady'
-    ],function(jasmine, htmlReporter, domReady){
+        'TestSuite'
+    ],function(jasmine, domReady){ 
     var jasmineEnv = jasmine.getEnv();
     
-    htmlReporter = new htmlReporter()
-        
+    htmlReporter = new jasmine.HtmlReporter();
+    
     jasmineEnv.addReporter(htmlReporter);
     
     jasmineEnv.specFilter = function(spec) {
