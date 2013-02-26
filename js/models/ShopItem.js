@@ -1,4 +1,4 @@
-define(['backbone'], function(Backbone){
+define(['jquery','underscore','backbone'], function($, _, Backbone){
     var ShopItem = Backbone.Model.extend({
         defaults: {
             name: 'n/a',

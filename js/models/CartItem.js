@@ -1,8 +1,9 @@
-define(['backbone'], function(Backbone){
+define(['jquery','underscore','backbone'], function($, _, Backbone){
     var CartItem = Backbone.Model.extend({
         defaults: {
-                name: 'n/a',
-                quantity: 0
+                name: 'none',
+                quantity: 0,
+                price: 0
         }
     });
     
