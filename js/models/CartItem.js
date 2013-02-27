@@ -15,7 +15,7 @@ function($, _, Backbone){
             }
             
             if (!_.isNumber(attr.quantity)) {
-                return 'CartItem.name should be a number';
+                return 'CartItem.quantity should be a number';
             }
             
             if (!_.isNumber(attr.price)) {
