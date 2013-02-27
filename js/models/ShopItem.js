@@ -1,4 +1,7 @@
-define(['jquery','underscore','backbone'], function($, _, Backbone){
+define(['jquery',
+        'underscore',
+        'backbone'], 
+function($, _, Backbone){
     var ShopItem = Backbone.Model.extend({
         defaults: {
             name: 'n/a',
@@ -11,19 +14,19 @@ define(['jquery','underscore','backbone'], function($, _, Backbone){
         },
         validate: function(attr){
             if (!_.isString(attr.name)) {
-                return 'CartItem.name should be a string';
+                return 'ShopItem.name should be a string';
             }
             
             if (!_.isString(attr.description)) {
-                return 'CartItem.name should be a string'
+                return 'ShopItem.description should be a string'
             }
             
             if (!_.isNumber(attr.price)) {
-                return 'CartItem.price should be a number'
+                return 'ShopItem.price should be a number'
             }
             
             if (!_.isString(attr.category)) {
-                return 'CartItem.price should be a string'
+                return 'ShopItem.category should be a string'
             }
             //TODO: Create a validation for photo url
         }
