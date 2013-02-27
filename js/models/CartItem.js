@@ -1,4 +1,8 @@
-define(['jquery', 'underscore', 'backbone'], function($, _, Backbone){
+define(['jquery', 
+        'underscore', 
+        'backbone'], 
+function($, _, Backbone){
+    'use strict';
     var CartItem = Backbone.Model.extend({
         defaults: {
                 name: 'n/a',
@@ -11,11 +15,11 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone){
             }
             
             if (!_.isNumber(attr.quantity)) {
-                return 'CartItem.name should be a number'
+                return 'CartItem.name should be a number';
             }
             
             if (!_.isNumber(attr.price)) {
-                return 'CartItem.price should be a number'
+                return 'CartItem.price should be a number';
             }
         }
     });
