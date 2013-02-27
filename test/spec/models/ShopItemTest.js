@@ -101,7 +101,33 @@ define(function(require, exports, module){
                         {validate: true});
                     expect(ShopItem.validate.calls.length).toEqual(1);
                 });
-                //TODO: Add unit test for failed validation
+                
+                it('Should throw an error on validation error', function(){
+                    var invalidSpy = jasmine.createSpy('- Invalid Value Spy -');
+                    
+                    ShopItem.on('invalid', invalidSpy);
+                    
+                    ShopItem.set('name', 5, {validate: true});
+                    expect(invalidSpy).toHaveBeenCalled();
+                    expect(invalidSpy.calls.length).toBe(1);
+                    expect(ShopItem.validationError).toBe('ShopItem.name should be a string');
+                    
+                    ShopItem.set('description', 5, {validate: true});
+                    expect(invalidSpy).toHaveBeenCalled();
+                    expect(invalidSpy.calls.length).toBe(2);
+                    expect(ShopItem.validationError).toBe('ShopItem.description should be a string');
+                    
+                    ShopItem.set('price', 'Some String', {validate: true});
+                    expect(invalidSpy).toHaveBeenCalled();
+                    expect(invalidSpy.calls.length).toBe(3);
+                    expect(ShopItem.validationError).toBe('ShopItem.price should be a number');
+                    
+                    ShopItem.set('category', 5, {validate: true});
+                    expect(invalidSpy).toHaveBeenCalled();
+                    expect(invalidSpy.calls.length).toBe(4);
+                    expect(ShopItem.validationError).toBe('ShopItem.category should be a string');
+                    
+                });
             });
         // END DESCRIBE
         });
