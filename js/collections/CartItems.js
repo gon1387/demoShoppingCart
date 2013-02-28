@@ -10,5 +10,5 @@ define(function(require, exports, module) {
         model: ShoppingCart.Models.CartItem
     });
     
-    exports.CartItems = ShoppingCart.Collections.CartItems = CartItems;
+    return ShoppingCart.Collections.CartItems = CartItems;
 });
