@@ -6,11 +6,11 @@ define(function(require, exports, module) {
      * Prepares the Shopping cart namespace for use by all modules
      */
     var ShoppingCart;
-    ShoppingCart = exports.ShoppingCart = global.ShoppingCart = {
+    ShoppingCart = exports.ShoppingCart = global.ShoppingCart || (global.ShoppingCart = {
         Models: {},
         Collections: {},
         Views: {}
-    }; 
+    }); 
     
     exports.global = global;
 });
