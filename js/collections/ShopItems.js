@@ -4,10 +4,10 @@ define(function(require, exports, module) {
         _ = require('underscore'),
         Backbone = require('backbone'),
         ShoppingCart = require('utils/Globals').ShoppingCart,
-        ShopItem = require('models/ShopItem').ShopItem;
+        ShopItem = require('models/ShopItem');
         
     var ShopItems = Backbone.Collection.extend({
-        model: ShoppingCart.Models.ShopItem
+        model: ShopItem
     });
     
     return ShoppingCart.Collections.ShopItems = ShopItems;
