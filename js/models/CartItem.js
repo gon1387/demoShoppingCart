@@ -25,6 +25,6 @@ define(function(require, exports, module) {
             }
         }
     });
-    console.log(require('utils/Globals'));
+    
     return ShoppingCart.Models.CartItem = CartItem;
 });
