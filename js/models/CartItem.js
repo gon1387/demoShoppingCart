@@ -1,8 +1,10 @@
-define(['jquery', 
-        'underscore', 
-        'backbone'], 
-function($, _, Backbone){
+define(function(require, exports, module) {
     'use strict';
+    var $ = require('jquery'),
+        _ = require('underscore'),
+        Backbone = require('backbone'),
+        ShoppingCart = require('utils/Globals').ShoppingCart;
+    
     var CartItem = Backbone.Model.extend({
         defaults: {
                 name: 'n/a',
@@ -24,5 +26,5 @@ function($, _, Backbone){
         }
     });
     
-    return CartItem;
+    exports.CartItem = ShoppingCart.Models.CartItem = CartItem;
 });

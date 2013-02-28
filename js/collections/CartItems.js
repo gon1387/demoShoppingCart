@@ -3,11 +3,12 @@ define(function(require, exports, module) {
     var $ = require('jquery'),
         _ = require('underscore'),
         Backbone = require('backbone'),
-        CartItem = require('models/CartItem');
+        ShoppingCart = require('utils/Globals').ShoppingCart,
+        CartItem = require('models/CartItem').CartItem;
         
     var CartItems = Backbone.Collection.extend({
-        model: CartItem
+        model: ShoppingCart.Models.CartItem
     });
     
-    return CartItems;
+    exports.CartItems = ShoppingCart.Collections.CartItems = CartItems;
 });

@@ -1,7 +1,10 @@
-define(['jquery',
-        'underscore',
-        'backbone'], 
-function($, _, Backbone){
+define(function(require, exports, module) {
+    'use strict';
+    var $ = require('jquery'),
+        _ = require('underscore'),
+        Backbone = require('backbone'),
+        ShoppingCart = require('utils/Globals').ShoppingCart;
+    
     var ShopItem = Backbone.Model.extend({
         defaults: {
             name: 'n/a',
@@ -31,5 +34,6 @@ function($, _, Backbone){
             //TODO: Create a validation for photo url
         }
     });
-    return ShopItem;
+    
+    exports.ShopItem = ShoppingCart.Models.ShopItem = ShopItem;
 });
