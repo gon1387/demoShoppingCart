@@ -1,10 +1,12 @@
-define(['jquery', 
-        'underscore', 
-        'backbone', 
-        'models/ShopItem'], 
-function($, _, Backbone, ShopItem){
+define(function(require, exports, module) {
+    'use strict';
+    var $ = require('jquery'),
+        _ = require('underscore'),
+        Backbone = require('backbone'),
+        CartItem = require('models/CartItem');
+        
     var CartItems = Backbone.Collection.extend({
-        model: ShopItem
+        model: CartItem
     });
     
     return CartItems;
