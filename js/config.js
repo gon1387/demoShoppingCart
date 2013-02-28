@@ -17,7 +17,3 @@ requirejs.config({
         }
     }
 });
-
-require(['app'] , function(App){
-    App.initialize();
-});
