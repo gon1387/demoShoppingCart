@@ -2,7 +2,14 @@ requirejs.config({
     paths: {
         jquery: 'libs/jquery',
         underscore: 'libs/underscore',
-        backbone: 'libs/backbone'
+        backbone: 'libs/backbone',
+        
+        libs: 'libs',
+        models: 'models',
+        collections: 'collections',
+        templates: 'templates',
+        views: 'views',
+        utils: 'utils'
     },
     shim: {
         'backbone': {
