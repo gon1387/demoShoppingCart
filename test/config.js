@@ -7,6 +7,7 @@ requirejs.config({
         collections: '../js/collections',
         templates: '../js/templates',
         views: '../js/views',
+        utils: '../js/utils',
         
         jquery: '../js/libs/jquery',
         underscore: '../js/libs/underscore',

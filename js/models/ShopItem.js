@@ -35,5 +35,5 @@ define(function(require, exports, module) {
         }
     });
     
-    exports.ShopItem = ShoppingCart.Models.ShopItem = ShopItem;
+    return ShoppingCart.Models.ShopItem = ShopItem;
 });
