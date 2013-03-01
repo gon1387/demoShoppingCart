@@ -1,0 +1,118 @@
+#content {
+    /*******************
+        SHOP RACK
+    *******************/
+    #shop-rack {
+        position:relative;
+        /* Used for block alignment */
+        text-align: center;
+        
+        /*******************
+            SHOP ITEM
+        *******************/
+        .shop-item {
+            display: inline;
+            width: 120px;
+            height:120px;
+            margin: 10px 20px;
+
+            /*******************
+                ITEM INFO
+            *******************/
+            dl {
+                width: 300px;
+                position: absolute;
+
+                display: block;
+                margin: 0px;
+
+                dt {
+                    clear: left;
+                    float: left;
+                    margin-bottom: 0px;
+                }
+                dd {
+                    float: left;
+                    margin-bottom: 0px;
+
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    /*******************
+    SHOPPING CART SIDEBAR
+    *******************/
+    .shop-sidebar {
+        background-color: #eee;
+
+        /*******************
+            CART LIST
+        *******************/
+        #shopping-cart {
+            min-height: 500px;
+
+            /*******************
+                LIST HEADER
+            *******************/
+            div {
+                position:relative;
+                ul {
+                    margin-left: 65px;
+                    li.prod-name {
+                        width: 95px;
+                    }
+                    li {
+                        display: inline-block;
+                        width: 50px;
+                    }
+                }
+            }
+
+            /*******************
+                CART ITEMS
+            *******************/
+            #cart-items {
+                .cart-item {
+                    position: relative;
+
+                    /*******************
+                        CART ITEM INFO
+                    *******************/
+                    img {
+                        display: inline-block;
+                        max-width: 50px;
+                        max-height: 50px;
+                        margin: 10px 10px;
+
+                        vertical-align:middle
+                    }
+                    ul {
+                        display: inline-block;
+                        margin: 0px;
+
+                        li.prod-name {
+                            width: 100px;
+                            margin-left:0px;
+                        }
+                        li {
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/*******************
+    DESIGN THEMES
+*******************/
+.bordered {
+    border: 2px #eee solid;
+    border: 2px rgba(255,255,255,1) solid;
+    box-shadow: 0 0 3px rgba(0,0,0,.25);
+}

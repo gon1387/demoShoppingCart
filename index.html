@@ -14,13 +14,94 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+	<link href="css/yaml/core/base.css" rel="stylesheet" type="text/css"/>
+	<link href="css/yaml/navigation/hlist.css" rel="stylesheet" type="text/css"/>
+	<link href="css/yaml/forms/gray-theme.css" rel="stylesheet" type="text/css"/>
+	<link href="css/yaml/screen/typography.css" rel="stylesheet" type="text/css"/>
+	<link href="css/yaml/screen/screen-FULLPAGE-layout.css" rel="stylesheet" type="text/css"/>
+	<link href="css/yaml/print/print.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="css/app.css">
+        <script data-main="js/shoppingMain.js" src="js/libs/require.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
+        <!-- CONTENT START -->
         <!-- Add your site or application content here -->
-		<div id="content"></div>
+        <div class="ym-wrapper">
+            <div class="ym-wbox">
+                <header>
+                    
+                </header>
+            </div>
+        </div>
+        
+        <div class="ym-wrapper">
+            <div class="ym-wbox">
+                <div id="content">
+                    <div class="ym-grid ym-equalize">
+                        <section class="ym-g66 ym-gl">
+                            <div id="shop-rack">
+                                <div class="shop-item">
+                                    <img src="img/Shoes.png" class="bordered" />
+                                    <dl>
+                                        <dt>Description</dt>
+                                        <dd>Lorem Impsum Dolor Sit Amet</dd>
+                                        <dt>Price</dt>
+                                        <dd>263.25</dd>
+                                        <dt>Category</dt>
+                                        <dd>Shoes</dd>
+                                    </dl>
+                                </div>
+                                <div class="shop-item"><img src="img/Shoes.png" class="bordered" /></div>
+                                <div class="shop-item"><img src="img/Shoes.png" class="bordered" /></div>
+                            </div>
+                        </section>
+                        <section class="ym-g33 ym-gr shop-sidebar">
+                            <div id="shopping-cart">
+                                <div>
+                                    <ul>
+                                        <li class="prod-name">NAME</li>
+                                        <li>PRICE</li>
+                                        <li>QUANTITY</li>
+                                    </ul>
+                                </div>
+                                <div id="cart-items">
+                                    <div class="cart-item">
+                                        <img src="img/Shoes.png" class="bordered" />
+                                        <ul>
+                                            <li class="prod-name">Item Name</li>
+                                            <li>5</li>
+                                            <li>30</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cart-item">
+                                        <img src="img/Shoes.png" class="bordered" />
+                                        <ul>
+                                            <li class="prod-name">Item Name</li>
+                                            <li>5</li>
+                                            <li>30</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cart-item">
+                                        <img src="img/Shoes.png" class="bordered" />
+                                        <ul>
+                                            <li class="prod-name">Item Name</li>
+                                            <li>5</li>
+                                            <li>30</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+ 	<!-- CONTENT END -->
+        <script src="js/yaml-focusfix.js"></script>
     </body>
 </html>
