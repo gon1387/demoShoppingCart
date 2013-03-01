@@ -9,7 +9,8 @@ define(function(require, exports, module) {
         defaults: {
                 name: 'n/a',
                 quantity: 0,
-                price: 0
+                price: 0,
+                photo: 'img/Shoes.png'
         },
         validate: function(attr){
             if (!_.isString(attr.name)) {
