@@ -9,7 +9,11 @@ requirejs.config({
         collections: 'collections',
         templates: 'templates',
         views: 'views',
-        utils: 'utils'
+        utils: 'utils',
+        
+        text: 'libs/require/text',
+        domReady: 'libs/require/domReady'
+        
     },
     shim: {
         'backbone': {
