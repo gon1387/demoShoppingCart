@@ -13,7 +13,7 @@ define(function(require, exports, module) {
             category: '',
             //TODO: Look for a placeholder photo and change the default value
             //  as it's path
-            photo: ''
+            photo: 'img/Shoes.png'
         },
         validate: function(attr){
             if (!_.isString(attr.name)) {
