@@ -5,5 +5,7 @@ define(function(require, exports, module) {
         Backbone = require('backbone'),
         ShoppingCart = require('utils/Globals').ShoppingCart;
         
-        exports.EVT = ShoppingCart.EVT || _.extend(EVT, Backbone.Events);
+    ShoppingCart.EVT = ShoppingCart.EVT || _.extend(EVT, Backbone.Events);
+    
+    return ShoppingCart.EVT
 });
