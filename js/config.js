@@ -25,6 +25,10 @@ requirejs.config({
         },
         'jquery': {
             exports: '$'
+        },
+        'jquery-ui': {
+            defs: ['jquery'],
+            exports: '$'
         }
     }
 });
