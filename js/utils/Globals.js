@@ -15,7 +15,7 @@ define(function(require, exports, module) {
             Items: {}
         }
     }); 
-    
+    console.log(global.ShoppingCart.Views.Widgets);
     /**
      * Registers a namespace and object in the global context
      * 
