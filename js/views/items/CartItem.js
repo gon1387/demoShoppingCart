@@ -13,7 +13,6 @@ define(function(require, exports, module) {
         template: _.template(CartItemTpl),
         
         render: function(){
-            console.log();
             this.$el.html( this.template( this.model.toJSON()));
             return this;
         }

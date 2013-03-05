@@ -5,17 +5,18 @@
     #shop-rack {
         position:relative;
         /* Used for block alignment */
-        text-align: center;
+        text-align: left;
         
         /*******************
             SHOP ITEM
         *******************/
         .shop-item {
-            display: inline;
-            width: 120px;
+            display: inline-block;
+            width: 125px;
             height:120px;
-            margin: 10px 20px;
-
+            margin: 10px 15px;
+            text-align: center;
+            
             /*******************
                 ITEM INFO
             *******************/
@@ -23,7 +24,10 @@
                 width: 300px;
                 position: absolute;
 
-                display: block;
+                /**
+                 * Should be toggled to block for display
+                 */
+                display: none;
                 margin: 0px;
 
                 dt {
@@ -46,6 +50,7 @@
     *******************/
     .shop-sidebar {
         background-color: #eee;
+        width: 350px;
 
         /*******************
             CART LIST
@@ -54,18 +59,36 @@
             min-height: 500px;
 
             /*******************
+                ADDING ITEM
+            *******************/
+            #cart-items-add {
+                position: absolute;
+                top:0px;
+                z-index:1000;
+                width:100%;
+                height:100%;
+                text-align:center;
+                background-color: rgba(100, 100, 255, .5);
+
+                div {
+                    top: 50px;
+                }
+            }
+
+            /*******************
                 LIST HEADER
             *******************/
             div {
                 position:relative;
                 ul {
                     margin-left: 65px;
+                    padding-left: 5px;
                     li.prod-name {
                         width: 95px;
                     }
                     li {
                         display: inline-block;
-                        width: 50px;
+                        width: 40px;
                     }
                 }
             }
@@ -74,6 +97,8 @@
                 CART ITEMS
             *******************/
             #cart-items {
+                position: relative;
+
                 .cart-item {
                     position: relative;
 
@@ -91,13 +116,14 @@
                     ul {
                         display: inline-block;
                         margin: 0px;
+                        padding-left: 5px;
 
                         li.prod-name {
                             width: 100px;
                             margin-left:0px;
                         }
                         li {
-                            width: 50px;
+                            width: 40px;
                         }
                     }
                 }
@@ -115,4 +141,33 @@
     border: 2px #eee solid;
     border: 2px rgba(255,255,255,1) solid;
     box-shadow: 0 0 3px rgba(0,0,0,.25);
+}
+
+#content section {
+    /*
+     * Used to accomodate the drop-overlay
+     */
+    position: relative;
+
+        #shopping-cart {
+            div.drop-overlay {
+                position: absolute;
+                top: 0px;
+                z-index: 100;
+                width: 100%;
+                height: 100%;
+                display: none;
+
+                background-color: #6e9;
+                opacity:.5;
+            }
+        }
+}
+
+
+/*******************
+    STATUS
+*******************/
+.drag-state-on {
+    display: block !important;
 }

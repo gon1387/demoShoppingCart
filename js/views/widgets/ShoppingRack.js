@@ -12,8 +12,19 @@ define(function(require, exports, module) {
     var ShoppingRackView = Backbone.View.extend({
         el: document.getElementById('shop-rack'),
         
+        initialize: function() {
+            var pageView = this.options.pageView
+            if (pageView) {
+                
+            }
+        },
+        
         render: function() {
-            var shopItemView = new ShopItemListView({collection: this.collection});
+            var shopItemView = new ShopItemListView({
+                collection: this.collection,
+                pageView: this.options.pageView,
+                widgetView: this
+            });
             
             this.$el.append( shopItemView.render().el);
             

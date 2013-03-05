@@ -9,14 +9,16 @@ define(function(require, exports, module) {
         
     var ShopItemList = Backbone.View.extend({
         tagName: 'div',
-        id: 'shop-rack',
-        
-        
+        id: 'rack-contents',
         
         render: function(){
             this.$el.empty();
             this.collection.each(function(ShopItem){
-                var shopItemView = new ShopItemView({model: ShopItem});
+                var shopItemView = new ShopItemView({
+                        model: ShopItem,
+                        pageView: this.options.pageView,
+                        widgetView: this
+                    });
                 this.$el.append(shopItemView.render().el);
             }, this);
             
