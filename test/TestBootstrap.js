@@ -1,5 +1,5 @@
 define(['jasmine',
-        'libs/backbone/domReady',
+        'libs/require/domReady',
         'jasmine-html',
         'TestSuite'
     ],function(jasmine, domReady){ 
