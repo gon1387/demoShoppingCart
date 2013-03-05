@@ -21,7 +21,7 @@
 	<link href="css/yaml/screen/screen-FULLPAGE-layout.css" rel="stylesheet" type="text/css"/>
 	<link href="css/yaml/print/print.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="css/app.css">
-        <script data-main="js/shoppingMain.js" src="js/libs/require.js"></script>
+        <!--<script data-main="js/shoppingMain.js" src="js/libs/require.js"></script>-->
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -44,30 +44,40 @@
                     <div class="ym-grid ym-equalize">
                         <section id="shop" class="ym-g66 ym-gl">
                             <div id="shop-rack">
-                                <div class="shop-item">
-                                    <img src="img/Shoes.png" class="bordered" />
-                                    <div>Item Name</div>
-                                    <dl>
-                                        <dt>Description</dt>
-                                        <dd>Lorem Impsum Dolor Sit Amet</dd>
-                                        <dt>Price</dt>
-                                        <dd>263.25</dd>
-                                        <dt>Category</dt>
-                                        <dd>Shoes</dd>
-                                    </dl>
-                                </div>
-                                <div class="shop-item">
-                                    <img src="img/Shoes.png" class="bordered" />
-                                    <div>Item Name</div>
-                                </div>
-                                <div class="shop-item">
-                                    <img src="img/Shoes.png" class="bordered" />
-                                    <div>Item Name</div>
+                                <div id="rack-contents">
+                                    <div class="shop-item">
+                                        <img src="img/Shoes.png" class="bordered" />
+                                        <div>Item Name</div>
+                                        <dl>
+                                            <dt>Description</dt>
+                                            <dd>Lorem Impsum Dolor Sit Amet</dd>
+                                            <dt>Price</dt>
+                                            <dd>263.25</dd>
+                                            <dt>Category</dt>
+                                            <dd>Shoes</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="shop-item">
+                                        <img src="img/Shoes.png" class="bordered" />
+                                        <div>Item Name</div>
+                                    </div>
+                                    <div class="shop-item">
+                                        <img src="img/Shoes.png" class="bordered" />
+                                        <div>Item Name</div>
+                                    </div>
                                 </div>
                             </div>
                         </section>
                         <section class="ym-g33 ym-gr shop-sidebar">
                             <div id="shopping-cart">
+                                <div id="cart-items-add">
+                                    <div>
+                                        <label>Quantity: </label>
+                                        <input type="text" id="quantity" />
+                                        <input type="submit" id="add-cart-item" />
+                                    </div>
+                                </div>
+                                <div class="drop-overlay"></div>
                                 <div>
                                     <ul>
                                         <li class="prod-name">NAME</li>
